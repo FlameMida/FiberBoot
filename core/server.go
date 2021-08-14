@@ -24,7 +24,7 @@ func RunServer() {
 	time.Sleep(10 * time.Microsecond)
 
 	global.LOG.Info("server run success on ", zap.String("address", address))
-	fmt.Printf("[GIN-STARTER]文档地址:http://127.0.0.1%s/swagger/index.html \n", address)
+	fmt.Printf("[FiberBoot]文档地址:http://127.0.0.1%s/swagger/index.html \n", address)
 
 	global.LOG.Error(newServer().ServeAsync(address, Router).Error())
 }

@@ -37,7 +37,7 @@
 | `global`      | 全局对象                    | 全局对象 |
 | `initialize`  | 初始化                     | router,redis,gorm,validator, timer的初始化 |
 | `--internal`  | 初始化内部函数               | gorm 的 logger 自定义 |
-| `middleware`  | 中间件层                    | 用于存放 `gin` 中间件代码 |
+| `middleware`  | 中间件层                    | 用于存放中间件代码 |
 | `model`       | 模型层                     | 模型对应数据表              |
 | `--request`   | 入参结构体                  | 接收前端发送到后端的数据。  |
 | `--response`  | 出参结构体                  | 返回给前端的数据结构体      |

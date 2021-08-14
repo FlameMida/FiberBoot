@@ -1,0 +1,81 @@
+aliyun-oss:
+  endpoint: yourEndpoint
+  access-key-id: yourAccessKeyId
+  access-key-secret: yourAccessKeySecret
+  bucket-name: yourBucketName
+  bucket-url: yourBucketUrl
+  base-path: yourBasePath
+captcha:
+  key-long: 6
+  img-width: 240
+  img-height: 80
+casbin:
+  model-path: ./resource/rbac_model.conf
+email:
+  to: xxx@qq.com
+  port: 465
+  from: xxx@163.com
+  host: smtp.163.com
+  is-ssl: true
+  secret: xxx
+  nickname: noReply
+excel:
+  dir: ./resource/excel/
+jwt:
+  signing-key: yourKeys
+  expires-time: 604800
+  buffer-time: 86400
+local:
+  path: uploads/file
+mysql:
+  path: 127.0.0.1:3306
+  config: charset=utf8mb4&parseTime=True&loc=Local
+  db-name: test
+  username: root
+  password: root
+  max-idle-conns: 0
+  max-open-conns: 0
+  log-mode: ""
+  log-zap: true
+qiniu:
+  zone: ZoneHuaDong
+  bucket: ""
+  img-path: ""
+  use-https: false
+  access-key: ""
+  secret-key: ""
+  use-cdn-domains: false
+redis:
+  db: 0
+  addr: 127.0.0.1:6379
+  password: ""
+system:
+  env: public
+  addr: 8888
+  db-type: mysql
+  oss-type: local
+  use-multipoint: false
+tencent-cos:
+  bucket: ""
+  region: ap-shanghai
+  secret-id: ""
+  secret-key: ""
+  base-url: ""
+  path-prefix: ""
+timer:
+  start: true
+  spec: '@daily'
+  detail:
+  - tableName: operations
+    compareField: created_at
+    interval: 2160h
+zap:
+  level: info
+  format: console
+  prefix: '[FiberBoot]'
+  director: log
+  link-name: latest_log
+  showLine: true
+  encode-level: LowercaseColorLevelEncoder
+  stacktrace-key: stacktrace
+  log-in-console: true

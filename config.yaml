@@ -28,11 +28,11 @@ jwt:
 local:
   path: uploads/file
 mysql:
-  path: 127.0.0.1:3306
+  path: ''
   config: charset=utf8mb4&parseTime=True&loc=Local
-  db-name: test
-  username: root
-  password: root
+  db-name: ''
+  username: ''
+  password: ''
   max-idle-conns: 0
   max-open-conns: 0
   log-mode: ""

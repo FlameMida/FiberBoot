@@ -24,7 +24,7 @@ func Routers() *fiber.App {
 	Router.Use(middleware.Cors())
 
 	global.LOG.Info("register swagger handler")
-	Router.Get("/swagger/*", swagger.Handler)
+	Router.Get("/swagger/*", swagger.HandlerDefault)
 	// 方便统一添加路由组前缀 多服务器上线使用
 
 	//获取路由组实例

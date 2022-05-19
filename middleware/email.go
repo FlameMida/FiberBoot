@@ -40,10 +40,9 @@ func ErrorToEmail() fiber.Handler {
 		now := time.Now()
 
 		var (
-			once          sync.Once
-			errHandler    fiber.ErrorHandler
-			errPadding    = 15
-			errPaddingStr = strconv.Itoa(errPadding)
+			once       sync.Once
+			errHandler fiber.ErrorHandler
+			errPadding = 15
 		)
 
 		// Set error handler once
@@ -53,7 +52,7 @@ func ErrorToEmail() fiber.Handler {
 				for r := range stack[m] {
 					if len(stack[m][r].Path) > errPadding {
 						errPadding = len(stack[m][r].Path)
-						errPaddingStr = strconv.Itoa(errPadding)
+
 					}
 				}
 			}
